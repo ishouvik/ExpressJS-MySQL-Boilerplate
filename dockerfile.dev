@@ -11,7 +11,7 @@ WORKDIR /app
 
 # Install packages
 COPY package.json /app/package.json
-RUN yarn global add pm2 sequelize-cli
+RUN yarn global add nodemon sequelize-cli
 RUN yarn
 
 # Add all application files to workdir
