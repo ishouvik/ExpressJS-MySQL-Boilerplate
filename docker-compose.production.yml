@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: yarn start
+    env_file: .env.production
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - 80:3000
+volumes:
+  ? node_modules
