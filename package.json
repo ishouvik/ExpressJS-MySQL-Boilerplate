@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn db:setup && pm2-runtime start ecosystem.config.js --env production",
-    "start:dev": "yarn db:setup && pm2-runtime start ecosystem.config.js --env development",
+    "start:dev": "yarn db:setup && nodemon ./bin/www",
     "db:setup": "yarn db:create && yarn db:migrate",
     "db:create": "sequelize db:create",
     "db:migrate": "sequelize db:migrate",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "husky": "^1.1.4",
+    "nodemon": "^1.18.10",
     "standard": "^12.0.1"
   },
   "_moduleAliases": {

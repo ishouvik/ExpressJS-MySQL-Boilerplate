@@ -9,7 +9,9 @@ services:
     ports:
       - '4306:3306'
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: dockerfile.dev
     command: yarn start:dev
     env_file: .env.development
     volumes:
