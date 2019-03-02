@@ -1,4 +1,4 @@
-const models = require('../models')
+const models = require('@models')
 
 const User = models.User
 const UserAccount = models.UserAccount

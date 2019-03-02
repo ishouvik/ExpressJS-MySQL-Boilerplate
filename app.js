@@ -1,7 +1,8 @@
+require('module-alias/register')
 var express = require('express')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
-var router = require('./src/routes/index')
+var router = require('@routes')
 var helmet = require('helmet')
 
 var app = express()

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "@controllers/*": ["controllers/*"],
+      "@models/*": ["models/*"],
+      "@serializers/*": ["serializers/*"],
+      "@services/*": ["services/*"],
+      "@helpers/*": ["helpers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@routes/*": ["routes/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

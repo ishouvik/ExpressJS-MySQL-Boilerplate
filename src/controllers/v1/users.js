@@ -1,5 +1,5 @@
-const UserService = require('../../services/user')
-const UserSerializer = require('../../serializers/v1/user')
+const UserService = require('@services/user')
+const UserSerializer = require('@serializers/v1/user')
 
 exports.index = async (req, res) => {
   try {

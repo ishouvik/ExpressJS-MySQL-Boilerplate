@@ -1,5 +1,5 @@
 const express = require('express')
-const gatekeeper = require('../../middlewares/gatekeeper')
+const gatekeeper = require('@middlewares/gatekeeper')
 const users = require('./user')
 
 const app = express()

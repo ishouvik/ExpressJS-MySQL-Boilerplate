@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'sites',
+      name: 'express-mysql-boilerplate',
       script: './bin/www',
       autorestart: true,
       max_restarts: 5,

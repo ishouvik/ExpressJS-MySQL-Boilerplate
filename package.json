@@ -1,7 +1,7 @@
 {
-  "name": "blueprint",
+  "name": "express-mysql-boilerplate",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "scripts": {
     "start": "yarn db:setup && pm2-runtime start ecosystem.config.js --env production",
@@ -11,11 +11,6 @@
     "db:migrate": "sequelize db:migrate",
     "lint": "standard --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "standard --fix"
-    }
-  },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
@@ -23,6 +18,7 @@
     "express": "~4.16.0",
     "helmet": "^3.15.0",
     "jsonapi-serializer": "^3.6.3",
+    "module-alias": "^2.2.0",
     "morgan": "~1.9.0",
     "mysql2": "^1.6.4",
     "sequelize": "^4.42.0",
@@ -32,5 +28,20 @@
   "devDependencies": {
     "husky": "^1.1.4",
     "standard": "^12.0.1"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@controllers": "src/controllers",
+    "@models": "src/models",
+    "@serializers": "src/serializers",
+    "@services": "src/services",
+    "@helpers": "src/helpers",
+    "@middlewares": "src/middlewares",
+    "@routes": "src/routes"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "standard --fix"
+    }
   }
 }
