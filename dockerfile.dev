@@ -17,6 +17,6 @@ RUN yarn
 # Add all application files to workdir
 COPY . /app
 
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "start:dev" ]
 
 EXPOSE 3000/tcp

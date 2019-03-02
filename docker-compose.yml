@@ -12,7 +12,6 @@ services:
     build:
       context: .
       dockerfile: dockerfile.dev
-    command: yarn start:dev
     env_file: .env.development
     volumes:
       - .:/app
