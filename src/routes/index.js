@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const v1 = require('./v1')
+const v1 = require('./api/v1')
 
 const app = express()
 
@@ -14,7 +14,7 @@ app.get('/ping', (req, res) => {
   res.send('pong')
 })
 
-app.use('/v1', v1)
+app.use('/api/v1', v1)
 
 // Handle all wrong/missing paths
 app.get('*', (req, res) => {
