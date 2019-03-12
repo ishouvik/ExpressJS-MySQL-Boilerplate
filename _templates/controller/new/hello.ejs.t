@@ -1,12 +1,11 @@
 ---
-to: src/controllers/<%= h.inflection.dasherize(h.changeCase.lower(path)) %>/<%= h.inflection.camelize(resource, true) %>.js
+to: src/controllers/api/<%= h.inflection.dasherize(h.changeCase.lower(path)) %>/<%= h.inflection.camelize(resource, true) %>.js
 ---
 <%
   path = h.inflection.dasherize(h.changeCase.lower(path))
   resourceType = h.inflection.camelize(resource, true)
   model = h.inflection.camelize(resource)
-%>
-const <%= model %>Service = require('@services/<%= resourceType %>')
+%>const <%= model %>Service = require('@services/<%= resourceType %>')
 const <%= model %>Serializer = require('@serializers/<%= path %>/<%= resourceType %>')
 
 exports.index = async (req, res) => {

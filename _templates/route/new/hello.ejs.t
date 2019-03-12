@@ -1,12 +1,10 @@
 ---
-to: src/routes/<%= h.inflection.dasherize(h.changeCase.lower(path)) %>/<%= h.inflection.camelize(resource, true) %>.js
+to: src/routes/api/<%= h.inflection.dasherize(h.changeCase.lower(path)) %>/<%= h.inflection.camelize(resource, true) %>.js
 ---
 <%
   path = h.inflection.dasherize(h.changeCase.lower(path))
   resourceController = h.inflection.camelize(resource, true)
-%>
-
-const express = require('express')
+%>const express = require('express')
 const router = express.Router()
 const <%= resourceController %> = require('@controllers/<%= path %>/<%= resourceController %>')
 

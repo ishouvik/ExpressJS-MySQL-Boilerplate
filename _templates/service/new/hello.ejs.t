@@ -4,8 +4,7 @@ to: src/services/<%= h.inflection.camelize(resource, true) %>.js
 <%
   resourceType = h.inflection.camelize(resource, true)
   model = h.inflection.camelize(resource)
-%>
-const models = require('@models')
+%>const models = require('@models')
 const <%= model %> = models.<%= model %>
 
 // creates paginated <%= resourceType %> list

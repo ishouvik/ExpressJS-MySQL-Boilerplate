@@ -3,8 +3,7 @@ to: src/serializers/<%= h.inflection.dasherize(h.changeCase.lower(path)) %>/<%= 
 ---
 <%
   serializerType = h.inflection.dasherize(h.changeCase.lower(resource))
-%>
-'use strict'
+%>'use strict'
 var JSONAPISerializer = require('jsonapi-serializer').Serializer
 
 var opts = {

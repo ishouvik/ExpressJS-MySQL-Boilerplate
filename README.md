@@ -20,8 +20,7 @@
 We use [Hygen](https://www.hygen.io) to build our generators. The dev Docker image has `Hygen` pre-installed. You would have to exec container before executing the generator commands
 If you want to generate files outside Docker then Hygen has to be installed separately. In that case please follow the [quickstart](https://www.hygen.io/quick-start) guide to install it on your environment
 
-- New Serializer: `hygen serializer new --resource MySerializer --path v1`
-
-## To Do
-
-- Add more serializers
+- New Route: `hygen route new --resource MyResource --path v1`
+- New Controller: `hygen controller new --resource MyResource --path v1`
+- New Service: `hygen service new --resource MyResource`
+- New Serializer: `hygen serializer new --resource MyResource --path v1`
